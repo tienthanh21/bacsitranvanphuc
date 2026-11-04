@@ -89,12 +89,12 @@
                 </a>
                 
                 <div>
-                    <span class="text-xs font-semibold text-emerald-600 tracking-wider uppercase block">Sức Khỏe Toàn Diện</span>
-                    <h1 class="text-lg font-bold text-slate-900 leading-tight">BS. Trần Văn Phúc <span class="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-full font-semibold border border-red-200"><a href="https://www.youtube.com/@BacsiTranVanPhucOfficial" target="_blank"><i class="fa-brands fa-youtube mr-1"></i>Official</a></span></h1>
+                    <span class="text-xs font-semibold text-emerald-600 tracking-wider uppercase block"><a href="">Sức Khỏe Toàn Diện</a></span>
+                    <h1 class="text-lg font-bold text-slate-900 leading-tight"><a href="">BS. Trần Văn Phúc </a><span class="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-full font-semibold border border-red-200"><a href="https://www.youtube.com/@BacsiTranVanPhucOfficial" target="_blank"><i class="fa-brands fa-youtube mr-1"></i>Official</a></span></h1>
                 </div>
             </div>
 
-            <!-- Nav Links -->
+            <!-- Nav Links (Desktop) -->
             <nav class="hidden lg:flex items-center space-x-6">
                 <a href="#loi-khuyen" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Triết Lý Lối Sống</a>
                 <a href="#dieu-chinh-an-uong" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Chế Độ Ăn & Lectin</a>
@@ -103,12 +103,39 @@
                 <a href="#tieu-chuan-chon" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Cách Chọn Sản Phẩm</a>
             </nav>
 
-            <!-- <a href="#chi-tiet" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-medium px-5 py-2.5 rounded-xl shadow-lg shadow-emerald-600/20 transition-all duration-300 hover:scale-105 text-sm">
-                <span>Khám phá vi chất</span>
-                <i class="fa-solid fa-arrow-down text-xs"></i>
-            </a> -->
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="lg:hidden text-slate-700 hover:text-emerald-600 focus:outline-none p-2 rounded-xl border border-slate-200 bg-white shadow-sm" aria-label="Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-md border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#loi-khuyen" class="mobile-link block text-base font-medium text-slate-700 hover:text-emerald-600 py-2 border-b border-slate-100">Triết Lý Lối Sống</a>
+            <a href="#dieu-chinh-an-uong" class="mobile-link block text-base font-medium text-slate-700 hover:text-emerald-600 py-2 border-b border-slate-100">Chế Độ Ăn & Lectin</a>
+            <a href="#hoc-mon" class="mobile-link block text-base font-medium text-slate-700 hover:text-emerald-600 py-2 border-b border-slate-100">Nội Tiết & Hơi Thở</a>
+            <a href="#danh-sach" class="mobile-link block text-base font-medium text-slate-700 hover:text-emerald-600 py-2 border-b border-slate-100">7 Vi Chất Vàng</a>
+            <a href="#tieu-chuan-chon" class="mobile-link block text-base font-medium text-slate-700 hover:text-emerald-600 py-2">Cách Chọn Sản Phẩm</a>
         </div>
     </header>
+
+    <!-- Script xử lý bật/tắt menu di động -->
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Tự động ẩn menu khi bấm vào một mục chọn trên điện thoại
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
 
     <!-- Hero Section -->
     <section class="relative overflow-hidden pt-12 pb-20 lg:pt-16 lg:pb-24 bg-gradient-to-b from-teal-50/60 via-sky-50/40 to-slate-50">
@@ -694,7 +721,7 @@
                             <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto my-6 backdrop-blur-md">
                                 <i class="fa-solid fa-fish text-4xl text-white"></i>
                             </div>
-                            <span class="inline-block bg-white/20 px-4 py-1.5 rounded-full text-sm font-semibold">Omega-3 Acid béo ko bão hòa</span>
+                            <span class="inline-block bg-white/20 px-4 py-1.5 rounded-full text-sm font-semibold">Acid béo không bão hòa</span>
                         </div>
                     </div>
                     <div class="w-full md:w-2/3 space-y-5">
