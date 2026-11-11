@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đọc file TXT</title>
+</head>
+<body>
+
+    <div id="content"></div>
+
+    <script>
+        var NoiDung = "";
+
+        fetch("ver.txt")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Không đọc được file TXT");
+                }
+                return response.text();
+            })
+            .then(data => {
+                NoiDung = data;
+alert(NoiDung);
+                // console.log(NoiDung);
+
+                // document.getElementById("content").innerText = NoiDung;
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+    </script>
+
+</body>
+</html>
